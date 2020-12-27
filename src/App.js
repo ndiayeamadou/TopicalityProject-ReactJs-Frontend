@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateTopicalityComponent from './components/CreateTopicalityComponent'
 import UpdateTopicalityComponent from './components/UpdateTopicalityComponent';
 import CreateUpdateTopicalityComponent from './components/CreateUpdateTopicalityComponent';
+import ShowTopicalityComponent from './components/ShowTopicalityComponent';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               {/* Create Or Update Topicality */}
               <Route path="/add-or-update-topicality/:id" component={CreateUpdateTopicalityComponent}></Route>
               <Route path="/update-topicality/:id" component = { UpdateTopicalityComponent }></Route>
+              <Route path="/show-topicality/:id" component = { ShowTopicalityComponent } ></Route>
             </Switch>
         </div>
         <FooterComponent />

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TopicalityService from '../services/TopicalityService'
 
 export default class ListTopicalitiesComponent extends Component {
+
     constructor(props) {
         super(props)
 
@@ -11,6 +12,7 @@ export default class ListTopicalitiesComponent extends Component {
         }
         this.addTopicalityPath = this.addTopicalityPath.bind(this);
         this.updateTopicality = this.updateTopicality.bind(this);
+        this.showTopicality = this.showTopicality.bind(this);
     }
 
     componentDidMount () {
@@ -37,6 +39,10 @@ export default class ListTopicalitiesComponent extends Component {
             this.setState({topicalities: this.state.topicalities.filter(topicality => topicality.id !== id)})
             //this.props.history.push('/topicalities')
         })
+    }
+
+    showTopicality (id) {
+        return this.props.history.push(`/show-topicality/${id}`)
     }
 
     render() {
@@ -66,6 +72,7 @@ export default class ListTopicalitiesComponent extends Component {
                                     <td>
                                         <button onClick = { () => this.updateTopicality(topicality.id) } className="btn btn-info">Update</button>
                                         <button onClick = { () => this.deleteTopicality(topicality.id) } className="btn btn-danger ml-3">Delete</button>
+                                        <button onClick = { () => this.showTopicality(topicality.id) } className="btn btn-primary">View</button>
                                     </td>
                                 </tr>
                             )}
