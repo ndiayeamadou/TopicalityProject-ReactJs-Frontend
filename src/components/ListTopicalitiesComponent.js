@@ -31,6 +31,8 @@ export default class ListTopicalitiesComponent extends Component {
         this.props.history.push(`/add-or-update-topicality/${id}`)
     }
 
+    deleteTopicality (id) {}
+
     render() {
         return (
             <div className="container">
@@ -57,6 +59,7 @@ export default class ListTopicalitiesComponent extends Component {
                                     <td>{ topicality.content }</td>
                                     <td>
                                         <button onClick = { () => this.updateTopicality(topicality.id) } className="btn btn-info">Update</button>
+                                        <button onClick = { () => this.deleteTopicality(topicality.id) } className="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
                             )}
