@@ -13,6 +13,18 @@
   }
 }
 
+.Elan-color{ background-color: #282c34; color: white;}
+
+.footer {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  background-color: #343a40!important;
+  height: 50px;
+  color: white;
+  text-align: center;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
