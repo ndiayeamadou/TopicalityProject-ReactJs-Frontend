@@ -7,7 +7,7 @@ export default class HeaderComponent extends Component {
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                         <div>
-                            <a href="http://" className="navbar-brand" target="_blank" rel="noopener noreferrer">Topicality</a>
+                            <a href="/topicalities" className="navbar-brand">Topicality</a>
                         </div>
                     </nav>
                 </header>

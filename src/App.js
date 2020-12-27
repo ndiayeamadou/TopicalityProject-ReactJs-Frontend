@@ -24,7 +24,7 @@ function App() {
               {/* Create Or Update Topicality */}
               <Route path="/add-or-update-topicality/:id" component={CreateUpdateTopicalityComponent}></Route>
               <Route path="/update-topicality/:id" component = { UpdateTopicalityComponent }></Route>
-              <Route path="/show-topicality/:id" component = { ShowTopicalityComponent } ></Route>
+              <Route path="/show-topicality/:id" component = { ShowTopicalityComponent }></Route>
             </Switch>
         </div>
         <FooterComponent />
