@@ -20,6 +20,10 @@ class TopicalityService {
         return axios.put(TOPICALITY_API_BASE_URL +'/'+ topicalityId, topicality)
     }
 
+    deleteTopicality (topicalityId) {
+        return axios.delete(TOPICALITY_API_BASE_URL + "/" + topicalityId)
+    }
+
 }
 
 export default new TopicalityService()

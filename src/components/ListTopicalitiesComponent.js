@@ -31,7 +31,13 @@ export default class ListTopicalitiesComponent extends Component {
         this.props.history.push(`/add-or-update-topicality/${id}`)
     }
 
-    deleteTopicality (id) {}
+    deleteTopicality (id) {
+        TopicalityService.deleteTopicality(id).then( res => {
+            //then delete the topicality from the topicalities array - filter out the deleted topicality from the topicalities array
+            this.setState({topicalities: this.state.topicalities.filter(topicality => topicality.id !== id)})
+            //this.props.history.push('/topicalities')
+        })
+    }
 
     render() {
         return (
@@ -59,7 +65,7 @@ export default class ListTopicalitiesComponent extends Component {
                                     <td>{ topicality.content }</td>
                                     <td>
                                         <button onClick = { () => this.updateTopicality(topicality.id) } className="btn btn-info">Update</button>
-                                        <button onClick = { () => this.deleteTopicality(topicality.id) } className="btn btn-danger">Delete</button>
+                                        <button onClick = { () => this.deleteTopicality(topicality.id) } className="btn btn-danger ml-3">Delete</button>
                                     </td>
                                 </tr>
                             )}
